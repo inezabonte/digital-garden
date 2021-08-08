@@ -1,0 +1,15 @@
+{
+	"name": "digital-garden",
+	"version": "1.0.0",
+	"description": "A Digital Garden where I post random things related to web development 🪴",
+	"main": "index.js",
+	"author": "inezabonte <inezabonte@gmail.com>",
+	"license": "MIT",
+	"dependencies": {
+		"next": "^11.0.1",
+		"nextra": "^1.1.0",
+		"nextra-theme-docs": "^1.2.1",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2"
+	}
+}
