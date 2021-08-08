@@ -5,6 +5,11 @@
 	"main": "index.js",
 	"author": "inezabonte <inezabonte@gmail.com>",
 	"license": "MIT",
+	"scripts": {
+		"dev": "next",
+		"start": "next start",
+		"build": "next build"
+	},
 	"dependencies": {
 		"next": "^11.0.1",
 		"nextra": "^1.1.0",
