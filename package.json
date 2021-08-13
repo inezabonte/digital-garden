@@ -11,7 +11,9 @@
 		"build": "next build"
 	},
 	"dependencies": {
+		"@sanity/client": "^2.14.0",
 		"next": "^11.0.1",
+		"next-mdx-remote": "^3.0.4",
 		"nextra": "^1.1.0",
 		"nextra-theme-docs": "^1.2.1",
 		"react": "^17.0.2",

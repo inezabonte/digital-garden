@@ -1,5 +1,5 @@
 const description =
-	"Digital Garden 🌱 - A bunch of pages created by Ineza that he finds useful";
+	"Digital Garden 🌱- A bunch of pages created by Ineza that he finds useful";
 
 const coverImage =
 	"https://res.cloudinary.com/tizzertuna/image/upload/v1628785945/Articles/cover_xgtvmg.png";
