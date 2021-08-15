@@ -1,0 +1,35 @@
+# Today I Learned ✍🏽
+
+import { getAllTils } from "../lib/api.js";
+import { useSSG } from "nextra/ssg";
+import { MDXRemote } from "next-mdx-remote";
+import DateComponent from "../components/DateComponent.js";
+
+export const getStaticProps = async ({ params }) => {
+	const tils = await getAllTils();
+	return {
+		props: {
+			ssg: {
+				tils,
+			},
+		},
+	};
+};
+
+export const Til = () => {
+	const { tils } = useSSG();
+	return (
+		<main className="mt-10 space-y-24">
+			{tils.map((item) => (
+				<div>
+					<DateComponent date={item.date} displayFormat="PPP" />
+					<MDXRemote {...item.content} />
+				</div>
+			))}
+		</main>
+	);
+};
+
+> In this section I'll be posting things I've learnt during my day.
+
+<Til />
