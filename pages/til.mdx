@@ -21,7 +21,7 @@ export const Til = () => {
 	return (
 		<main className="mt-10 space-y-24">
 			{tils.map((item) => (
-				<div>
+				<div key={item.date}>
 					<DateComponent date={item.date} displayFormat="PPP" />
 					<MDXRemote {...item.content} />
 				</div>
