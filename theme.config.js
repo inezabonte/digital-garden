@@ -1,5 +1,5 @@
 const description =
-	"Digital Garden 🌱- A bunch of pages created by Ineza that he finds useful";
+	"This is Ineza's Digital Garden 🌳 to which he adds resources, links and thoughts that are important to him ";
 
 const coverImage =
 	"https://res.cloudinary.com/tizzertuna/image/upload/v1628785945/Articles/cover_xgtvmg.png";
@@ -27,7 +27,7 @@ export default {
 			<meta property="og:image" content={coverImage} />
 			<meta property="og:image:width" content="1200" />
 			<meta property="og:image:height" content="630" />
-			<meta name="og:title" content="Ineza's Digital Garden🌱" />
+			<meta name="og:title" content="Ineza's Digital Garden🌳" />
 			<meta name="twitter:card" content="summary_large_image" />
 			<meta name="twitter:creator" content="@inezabonte" />
 			<meta name="twitter:site" content="@inezabonte" />
