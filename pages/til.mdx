@@ -19,11 +19,11 @@ export const getStaticProps = async ({ params }) => {
 export const Til = () => {
 	const { tils } = useSSG();
 	return (
-		<main className="mt-10">
+		<main className="mt-10 space-y-24">
 			{tils.map((item) => (
 				<div>
-					<MDXRemote {...item.content} />
 					<DateComponent date={item.date} displayFormat="PPP" />
+					<MDXRemote {...item.content} />
 				</div>
 			))}
 		</main>
