@@ -8,7 +8,8 @@
 	"scripts": {
 		"dev": "next",
 		"start": "next start",
-		"build": "next build"
+		"build": "next build",
+		"serve": "next build && next start"
 	},
 	"dependencies": {
 		"@sanity/client": "^2.14.0",

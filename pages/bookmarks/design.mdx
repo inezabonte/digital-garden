@@ -21,11 +21,11 @@ export const getStaticProps = async ({params}) => {
 export const Design = () => {
     const {data} = useSSG()
     return (
-        <div className="space-y-8 mt-8">
+        <div>
             {
                 data.map((item) => (
                 <div>
-                    <h3 className="m-0">{item.name}</h3>
+                    <h3>{item.name}</h3>
                     <span className="text-gray-600 dark:text-gray-400">{item.description}</span>
                     <a href={item.link} className="flex items-center" target="_blank">
                         <span>Link</span> 
