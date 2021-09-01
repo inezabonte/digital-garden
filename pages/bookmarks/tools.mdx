@@ -21,12 +21,12 @@ export const getStaticProps = async ({params}) => {
 export const Tools = () => {
     const {data} = useSSG()
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+        <div className="space-y-8 mt-8">
             {
                 data.map((item) => (
-                <div className="flex flex-col border-2 rounded border-gray-400 dark:border-gray-600 p-2">
+                <div>
                     <h3 className="m-0">{item.name}</h3>
-                    <span className="text-gray-500">{item.description}</span>
+                    <span className="text-gray-600 dark:text-gray-400">{item.description}</span>
                     <a href={item.link} className="flex items-center" target="_blank">
                         <span>Link</span> 
                         <HiExternalLink/>
