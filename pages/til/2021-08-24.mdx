@@ -1,0 +1,12 @@
+# Aug 24 2021
+
+## Fetching api data from getStaticProps & getStaticPaths
+
+`getStaticProps` and `getStaticPaths` are Next.js functions used to fetch data at build time to serve you static pages.
+There is however one issue I experienced today; which was fetching data from an api route within the project.
+
+The fetching failed because localhost is not available at build time.
+
+Which results in a `ECONNREFUSED` error
+
+One way around this is to use `getServerSideProps`

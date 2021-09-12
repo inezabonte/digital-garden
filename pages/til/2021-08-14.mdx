@@ -1,0 +1,16 @@
+# Aug 14 2021
+
+## Add labels to repeated buttons for screen readers
+
+For buttons which are repeated on a page it's best to add a visually hidden label inside the button that explains more about the button and what action it performs to enable those using screen readers to be able to tell them apart.
+
+_Example_
+
+```html
+<button>Add to Cart <span class="sr-only">, PRODUCT_NAME</span></button>
+```
+
+It's best to add the label as the last item in the button
+
+Source:
+[An article by Sara Soueidan ](https://www.sarasoueidan.com/blog/accessible-text-labels/)

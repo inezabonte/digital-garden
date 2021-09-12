@@ -1,0 +1,37 @@
+# Aug 17 2021
+
+## 1. Publishing an npm package
+
+When you want to test a package locally before pushing to npm or yarn, you can use the following commands
+
+On the package directory
+
+```bash
+$ yarn link
+```
+
+On the project where you wish to test it
+
+```bash
+$ yarn link package-name
+```
+
+To remove the connection from project
+
+```bash
+$ yarn unlink package-name
+```
+
+To stop linking the package
+
+```bash
+yarn unlink
+```
+
+> Replace yarn with npm depending on your use case
+
+## 2. cloning a specific branch
+
+```bash
+$ git clone -b <branch> <remote_repo>
+```

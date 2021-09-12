@@ -25,7 +25,7 @@ export const Tools = () => {
         <div>
             {
                 data.map((item) => (
-                <div>
+                <div key={item.nam}>
                     <h3>{item.name}</h3>
                     <span className="text-gray-600 dark:text-gray-400">{item.description}</span>
                     <a href={item.link} className="flex items-center" target="_blank">

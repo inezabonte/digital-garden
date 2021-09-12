@@ -1,0 +1,24 @@
+# Sep 03 2021
+
+## 1. Dynamically setting classes in TailWind
+
+Avoid using string concatenation to create classnames
+
+### Why?
+
+PurgeCSS won’t know to preserve those classes.
+
+### Suggested way 😎
+
+Dynamically select complete classnames
+
+```html
+<div className="{{  error  ?  'text-red-600'  :  'text-green-600'  }}"></div>
+```
+
+As long as a class name appears in your template in its entirety, PurgeCSS will not remove it.
+
+## 2. Generating Unix time in JS
+
+`Date.now()`
+Could come in handy in scenarios where you need an ID for rendered list of items
