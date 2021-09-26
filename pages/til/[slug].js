@@ -17,7 +17,7 @@ export async function getStaticPaths() {
 
 	return {
 		paths: paths.map((slug) => ({ params: { slug } })),
-		fallback: true,
+		fallback: false,
 	};
 }
 
@@ -28,5 +28,6 @@ export async function getStaticProps({ params }) {
 		props: {
 			til,
 		},
+		revalidate: 1,
 	};
 }
