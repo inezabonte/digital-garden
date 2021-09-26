@@ -1,10 +1,10 @@
-import MdxLayout from "@/layouts/MdxLayout";
+import Layout from "@/layouts/MainLayout";
 import Link from "next/link";
 
 export default function Home() {
 	return (
-		<MdxLayout>
-			<main className="min-h-screen flex flex-col justify-center items-center m-auto space-y-6 p-2">
+		<Layout>
+			<main className="flex flex-col justify-center items-center m-auto space-y-6 px-2">
 				<div>
 					<h1 className="text-2xl md:text-4xl font-bold">
 						Ineza's Digital Garden 🌱
@@ -22,6 +22,6 @@ export default function Home() {
 					</Link>
 				</div>
 			</main>
-		</MdxLayout>
+		</Layout>
 	);
 }
