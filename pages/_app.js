@@ -1,10 +1,12 @@
 import "styles/global.css";
-import { ThemeProvider } from "next-themes";
+import { DefaultSeo } from "next-seo";
+import SEO from "seo.config";
 
 export default function Nextra({ Component, pageProps }) {
 	return (
-		<ThemeProvider attribute="class" defaultTheme="system" enableSystem="true">
+		<>
+			<DefaultSeo {...SEO} />
 			<Component {...pageProps} />
-		</ThemeProvider>
+		</>
 	);
 }

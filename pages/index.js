@@ -1,11 +1,9 @@
 import MdxLayout from "@/layouts/MdxLayout";
 import Link from "next/link";
-import MetaData from "@/components/MetaData";
 
 export default function Home() {
 	return (
 		<MdxLayout>
-			<MetaData />
 			<main className="min-h-screen flex flex-col justify-center items-center m-auto space-y-6 p-2">
 				<div>
 					<h1 className="text-2xl md:text-4xl font-bold">
