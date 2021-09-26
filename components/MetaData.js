@@ -1,26 +1,15 @@
-const description =
-	"This is Ineza's Digital Garden 🌳 to which he adds resources, links and thoughts that are important to him ";
+import Head from "next/head";
 
-const coverImage =
-	"https://res.cloudinary.com/tizzertuna/image/upload/v1628785945/Articles/cover_xgtvmg.png";
+export default function MetaData({ title }) {
+	const description =
+		"This is Ineza's Digital Garden 🌳 to which he adds resources, links and thoughts that are important to him ";
 
-export default {
-	github: "https://github.com/inezabonte/digital-garden",
-	docsRepositoryBase:
-		"https://github.com/inezabonte/digital-garden/blob/main/pages",
-	nextLinks: true,
-	prevLinks: true,
-	titleSuffix: "",
-	logo: (
-		<>
-			<span className="mr-2 font-extrabold hidden md:inline">Ineza Bonté</span>
-			<span className="text-gray-600 font-normal hidden md:inline">
-				Welcome to my Digital Garden 🌳
-			</span>
-		</>
-	),
-	head: (
-		<>
+	const coverImage =
+		"https://res.cloudinary.com/tizzertuna/image/upload/v1628785945/Articles/cover_xgtvmg.png";
+
+	return (
+		<Head>
+			<title>{title ? title : "Digital Garden 🌱"}</title>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 			<link rel="icon" href="/favicon.ico" />
 			<meta name="description" content={description} />
@@ -35,10 +24,6 @@ export default {
 			<meta name="twitter:description" content={description} />
 			<meta name="twitter:image" content={coverImage} />
 			<meta name="twitter:image:alt" content={description} />
-		</>
-	),
-	search: false,
-	footer: false,
-	prevLinks: false,
-	nextLinks: false,
-};
+		</Head>
+	);
+}
