@@ -1,12 +1,12 @@
+import { NextSeo } from "next-seo";
 import Layout from "@/layouts/MdxLayout";
 import { parseMDXContent } from "lib/mdx";
 import { MDXRemote } from "next-mdx-remote";
-import { NextSeo } from "next-seo";
 
-export default function About({ mdxSource }) {
+export default function Tools({ mdxSource }) {
 	return (
 		<Layout>
-			<NextSeo title={"About | Digital Garden 🌱"} />
+			<NextSeo title={"Tools ⚙️ | Digital Garden 🌱"} />
 			<article className="prose prose-blue">
 				<MDXRemote {...mdxSource} />
 			</article>
@@ -15,7 +15,7 @@ export default function About({ mdxSource }) {
 }
 
 export async function getStaticProps() {
-	const pageData = await parseMDXContent("about", "content/pages");
+	const pageData = await parseMDXContent("tools", "content/pages/bookmarks");
 	return {
 		props: {
 			...pageData,
