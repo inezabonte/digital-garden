@@ -5,7 +5,7 @@ export default function MainLayout({ children }) {
 	return (
 		<div className="flex flex-col">
 			<NavBar />
-			<div className="flex justify-center">
+			<div className="md:flex justify-center">
 				<Menu />
 				{children}
 			</div>
