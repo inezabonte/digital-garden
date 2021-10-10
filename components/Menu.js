@@ -17,7 +17,11 @@ export default function Menu() {
 		<nav
 			className={`w-screen ${
 				!openMenu ? "hidden" : ""
-			} md:block  md:w-56 p-4  border-r border-gray-200 text-gray-600 fixed left-0 top-14 h-screen bg-gray-100 z-10 `}
+			} md:block  md:w-56 p-4  border-r border-gray-200 text-gray-600 fixed left-0 top-0 h-screen bg-gray-100 z-10 flex-shrink-0 md:sticky `}
+			style={{
+				top: "3.5rem",
+				height: "calc(100vh - 3.5rem)",
+			}}
 		>
 			<div className="flex flex-col space-y-3">
 				<Link href="/">

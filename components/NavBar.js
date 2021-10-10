@@ -30,7 +30,7 @@ export default function NavBar() {
 	if (!mounted) return null;
 
 	return (
-		<nav className="p-4 border-b border-gray-200 h-14 top-0 sticky bg-gray-100 z-10">
+		<nav className="p-4 border-b border-gray-200 h-14 top-0 sticky bg-gray-100 z-10 ">
 			<div className="flex items-center justify-between">
 				<span className="font-medium text-lg">Ineza's Digital Garden 🌳</span>
 
