@@ -22,6 +22,11 @@ export default function Bookmarks({ mdxSource }) {
 					<li>
 						<LinkComponent href="/bookmarks/tools">Tools ⚙️</LinkComponent>
 					</li>
+					<li>
+						<LinkComponent href="/bookmarks/library">
+							Libraries 🧰
+						</LinkComponent>
+					</li>
 				</ul>
 			</article>
 		</Layout>
@@ -34,5 +39,6 @@ export async function getStaticProps() {
 		props: {
 			...pageData,
 		},
+		revalidate: 1,
 	};
 }

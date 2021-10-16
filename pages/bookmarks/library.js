@@ -2,13 +2,13 @@ import { NextSeo } from "next-seo";
 import Layout from "@/layouts/MdxLayout";
 import { parseMDXContent } from "lib/mdx";
 import { MDXRemote } from "next-mdx-remote";
-import { getAllLearningBookmarks } from "lib/api";
+import { getAllLibraryBookmarks } from "lib/api";
 import { HiExternalLink } from "react-icons/hi";
 
-export default function Learning({ mdxSource, bookmarks }) {
+export default function Tools({ mdxSource, bookmarks }) {
 	return (
 		<Layout>
-			<NextSeo title={"Learning 📚 | Digital Garden 🌱"} />
+			<NextSeo title={"Libraries 🧰 | Digital Garden 🌱"} />
 			<article className="prose prose-blue">
 				<MDXRemote {...mdxSource} />
 			</article>
@@ -35,8 +35,11 @@ export default function Learning({ mdxSource, bookmarks }) {
 }
 
 export async function getStaticProps() {
-	const pageData = await parseMDXContent("learning", "content/pages/bookmarks");
-	const bookmarks = await getAllLearningBookmarks();
+	const pageData = await parseMDXContent(
+		"libraries",
+		"content/pages/bookmarks"
+	);
+	const bookmarks = await getAllLibraryBookmarks();
 	return {
 		props: {
 			...pageData,
