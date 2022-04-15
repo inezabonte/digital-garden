@@ -8,7 +8,7 @@ export default function Bookmarks({ mdxSource }) {
 	return (
 		<Layout>
 			<NextSeo title={"Bookmarks | Digital Garden 🌱"} />
-			<article className="prose prose-blue">
+			<article className="prose">
 				<MDXRemote {...mdxSource} />
 				<ul>
 					<li>

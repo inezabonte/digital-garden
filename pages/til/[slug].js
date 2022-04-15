@@ -5,7 +5,7 @@ import { MDXRemote } from "next-mdx-remote";
 export default function slugTil({ til }) {
 	return (
 		<MdxLayout>
-			<article className="prose prose-blue">
+			<article className="prose">
 				<MDXRemote {...til} />
 			</article>
 		</MdxLayout>

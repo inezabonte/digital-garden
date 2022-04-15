@@ -9,7 +9,7 @@ export default function Learning({ mdxSource, bookmarks }) {
 	return (
 		<Layout>
 			<NextSeo title={"Learning 📚 | Digital Garden 🌱"} />
-			<article className="prose prose-blue">
+			<article className="prose">
 				<MDXRemote {...mdxSource} />
 			</article>
 			<div className="space-y-6 mt-4">
