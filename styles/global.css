@@ -157,7 +157,7 @@ body {
 }
 
 .selectedLink {
-	@apply bg-gray-200 text-black font-medium;
+	@apply bg-gray-200 dark:bg-gray-800 text-black dark:text-white font-medium;
 }
 
 code {

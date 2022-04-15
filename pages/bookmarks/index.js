@@ -1,14 +1,14 @@
-import Layout from "@/layouts/MdxLayout";
-import { parseMDXContent } from "lib/mdx";
-import { MDXRemote } from "next-mdx-remote";
-import { NextSeo } from "next-seo";
-import LinkComponent from "@/components/LinkComponent";
+import Layout from '@/layouts/MdxLayout'
+import { parseMDXContent } from 'lib/mdx'
+import { MDXRemote } from 'next-mdx-remote'
+import { NextSeo } from 'next-seo'
+import LinkComponent from '@/components/LinkComponent'
 
 export default function Bookmarks({ mdxSource }) {
 	return (
 		<Layout>
-			<NextSeo title={"Bookmarks | Digital Garden 🌱"} />
-			<article className="prose">
+			<NextSeo title={'Bookmarks | Digital Garden 🌱'} />
+			<article className="prose dark:prose-dark">
 				<MDXRemote {...mdxSource} />
 				<ul>
 					<li>
@@ -30,15 +30,15 @@ export default function Bookmarks({ mdxSource }) {
 				</ul>
 			</article>
 		</Layout>
-	);
+	)
 }
 
 export async function getStaticProps() {
-	const pageData = await parseMDXContent("bookmarks", "content/pages");
+	const pageData = await parseMDXContent('bookmarks', 'content/pages')
 	return {
 		props: {
 			...pageData,
 		},
 		revalidate: 1,
-	};
+	}
 }

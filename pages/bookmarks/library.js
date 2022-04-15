@@ -1,15 +1,15 @@
-import { NextSeo } from "next-seo";
-import Layout from "@/layouts/MdxLayout";
-import { parseMDXContent } from "lib/mdx";
-import { MDXRemote } from "next-mdx-remote";
-import { getAllLibraryBookmarks } from "lib/api";
-import { HiExternalLink } from "react-icons/hi";
+import { NextSeo } from 'next-seo'
+import Layout from '@/layouts/MdxLayout'
+import { parseMDXContent } from 'lib/mdx'
+import { MDXRemote } from 'next-mdx-remote'
+import { getAllLibraryBookmarks } from 'lib/api'
+import { HiExternalLink } from 'react-icons/hi'
 
 export default function Tools({ mdxSource, bookmarks }) {
 	return (
 		<Layout>
-			<NextSeo title={"Libraries 🧰 | Digital Garden 🌱"} />
-			<article className="prose">
+			<NextSeo title={'Libraries 🧰 | Digital Garden 🌱'} />
+			<article className="prose dark:prose-dark">
 				<MDXRemote {...mdxSource} />
 			</article>
 			<div className="space-y-6 mt-4">
@@ -31,20 +31,17 @@ export default function Tools({ mdxSource, bookmarks }) {
 				))}
 			</div>
 		</Layout>
-	);
+	)
 }
 
 export async function getStaticProps() {
-	const pageData = await parseMDXContent(
-		"libraries",
-		"content/pages/bookmarks"
-	);
-	const bookmarks = await getAllLibraryBookmarks();
+	const pageData = await parseMDXContent('libraries', 'content/pages/bookmarks')
+	const bookmarks = await getAllLibraryBookmarks()
 	return {
 		props: {
 			...pageData,
 			bookmarks,
 		},
 		revalidate: 1,
-	};
+	}
 }
