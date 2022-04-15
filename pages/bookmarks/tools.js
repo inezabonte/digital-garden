@@ -9,7 +9,7 @@ export default function Tools({ mdxSource, bookmarks }) {
 	return (
 		<Layout>
 			<NextSeo title={"Tools ⚙️ | Digital Garden 🌱"} />
-			<article className="prose prose-blue">
+			<article className="prose">
 				<MDXRemote {...mdxSource} />
 			</article>
 			<div className="space-y-6 mt-4">

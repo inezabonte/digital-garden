@@ -10,9 +10,9 @@ export default function Til({ mdxSource, TilDates }) {
 	return (
 		<Layout>
 			<NextSeo title={"Today I Learned | Digital Garden 🌱"} />
-			<article className="prose prose-blue">
+			<article className="prose">
 				<MDXRemote {...mdxSource} />
-				<ul className="prose prose-blue">
+				<ul className="prose">
 					{TilDates.map((item) => (
 						<li key={item}>
 							<Link href={`/til/${item}`} key={item}>

@@ -7,10 +7,26 @@ module.exports = {
 	darkMode: "class",
 	theme: {
 		extend: {
+			colors: {
+				accent: "#00dd8d",
+			},
 			fontFamily: {
 				sans: ["Fira Sans", "sans-serif"],
 			},
 			typography: (theme) => ({
+				DEFAULT: {
+					css: {
+						a: {
+							textDecorationColor: theme("colors.accent"),
+							textDecorationThickness: "2px",
+							textUnderlineOffset: "4px"
+						},
+						"a:hover": {
+							backgroundColor: theme("colors.accent"),
+							color: theme("colors.white"),
+						},
+					},
+				},
 				dark: {
 					css: [
 						{

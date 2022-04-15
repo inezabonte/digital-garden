@@ -7,7 +7,7 @@ export default function About({ mdxSource }) {
 	return (
 		<Layout>
 			<NextSeo title={"About | Digital Garden 🌱"} />
-			<article className="prose prose-blue">
+			<article className="prose">
 				<MDXRemote {...mdxSource} />
 			</article>
 		</Layout>
