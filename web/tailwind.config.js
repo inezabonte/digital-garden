@@ -7,6 +7,9 @@ module.exports = {
 	darkMode: 'class',
 	theme: {
 		extend: {
+			padding: {
+				'1/2': '50%',
+			},
 			colors: {
 				'dark-body': '#121212',
 				accent: '#00DD8D',
