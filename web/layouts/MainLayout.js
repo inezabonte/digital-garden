@@ -1,5 +1,5 @@
-import Menu from "@/components/Menu";
-import NavBar from "@/components/NavBar";
+import Menu from '@/components/Menu'
+import NavBar from '@/components/NavBar'
 
 export default function MainLayout({ children }) {
 	return (
@@ -10,5 +10,5 @@ export default function MainLayout({ children }) {
 				{children}
 			</div>
 		</div>
-	);
+	)
 }

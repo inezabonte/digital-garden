@@ -51,6 +51,15 @@ export default function Menu() {
 						Bookmarks 🔖
 					</a>
 				</Link>
+				<Link href="/gallery">
+					<a
+						className={`navLink ${
+							router.pathname.includes('/gallery') ? 'selectedLink' : ''
+						}`}
+					>
+						Gallery 📸
+					</a>
+				</Link>
 			</div>
 		</nav>
 	)
