@@ -52,7 +52,7 @@ export async function getTilByDate(date) {
 
 export async function fetchGallery() {
 	const results = await Client.fetch(
-		'*[_type == "gallery"] | order(date desc) {_id, date, caption, "image": image.asset->url}'
+		'*[_type == "gallery"] | order(date desc) {_id, date, caption, "image": image.asset->url, "dimensions": image.asset->metadata.dimensions}'
 	)
 
 	return results
