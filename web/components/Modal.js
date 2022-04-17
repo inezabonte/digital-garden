@@ -12,7 +12,6 @@ export default function Modal({ selectedImg, setSelectedImg }) {
 				initial={{ scale: 0 }}
 				animate={{ scale: 1 }}
 				src={selectedImg}
-				alt=""
 				className="block max-w-[90%] max-h-[80%] my-16 mx-auto border-4 border-white drop-shadow-md"
 			/>
 		</motion.div>
