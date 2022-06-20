@@ -7,7 +7,7 @@ export default function ImageGrid({ images, setSelectedImg }) {
 				<div
 					key={image._id}
 					className="h-0 py-[50%] px-0 relative overflow-hidden rounded"
-					onClick={() => setSelectedImg(image.image)}
+					onClick={() => setSelectedImg(image)}
 				>
 					<Image
 						src={image.image}
